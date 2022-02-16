@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.productui.ProductDialogController"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Name: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" fx:id="nameField"/>
+
+            <Label text="Brand: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="brandField"/>
+
+            <Label text="Category: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" fx:id="categoryField"/>
+
+            <Label text="Stock: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField GridPane.rowIndex="3" GridPane.columnIndex="1" fx:id="stockField"/>
+        </GridPane>
+    </content>
+
+</DialogPane>

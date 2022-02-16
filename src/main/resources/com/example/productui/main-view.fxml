@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<BorderPane fx:id="mainPane" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.productui.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="Menu">
+                <MenuItem text="Add A New Product" onAction="#showAddNewProductDialog"/>
+                <MenuItem text="Edit The Selected Product" onAction="#showEditProductDialog"/>
+                <MenuItem text="Delete Rhe Selected Product" onAction="#showDeleteProductDialog"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit" onAction="#closeApp"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn prefWidth="150" text="Name" fx:id="columnName">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="150" text="Brand" fx:id="columnBrand">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="brand"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="150" text="Category" fx:id="columnCategory">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="category"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Stock" fx:id="columnStock">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="stock"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER">
+            <ProgressBar fx:id="progressBar"/>
+            <Label fx:id="progressText" text="Loading..."/>
+        </HBox>
+    </bottom>
+</BorderPane>
